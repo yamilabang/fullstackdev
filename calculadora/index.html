@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+  <!-- <div id="1">1er valor</div>
+  <div id="2">2do valor</div>
+  <div id="3">Resultado</div>
+
+  <script>
+    var num1 = prompt('Ingrese el primer numero');
+    var num2 = prompt('Ingrese el segundo numero');
+    var resultado = num1 * num2;
+
+    uno = document.getElementById('1')
+
+    uno.innerHTML += num1;
+
+    document.getElementById('2').innerHTML += num2;
+
+    document.getElementById('3').innerHTML += resultado;
+  </script> -->
+
+  <div>
+    <h2>Ingrese un número</h2>
+    <input type="decimal" id="numero1" placeholder="0.00">
+    <input type="decimal" id="numero2" placeholder="0.00">
+  </div>
+  <select id="operacion">
+    <option value="sumar">Sumar</option>
+    <option value="restar">Restar</option>
+    <option value="multiplicar">Multiplicar</option>
+    <option value="dividir">Dividir</option>
+  </select>
+
+  <button onclick="enviarOperacion()">Enviar</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    
+    function enviarOperacion(){
+      if (operacion.value == "sumar") {
+        sumar();
+      } else if (operacion.value == "restar") {
+        restar();
+      } else if (operacion.value == "multiplicar") {
+        multiplicar();
+      } else {
+        dividir();
+      }
+    }
+
+    function sumar(){
+      var num1 = parseFloat(document.getElementById("numero1").value);
+      console.log(num1);
+      var num2 = parseFloat(document.getElementById("numero2").value);
+      console.log(num1 + num2);
+      document.getElementById("resultado").innerHTML = num1 + num2;
+    }
+
+    function restar(){
+      var num1 = parseFloat(document.getElementById("numero1").value);
+      console.log(num1);
+      var num2 = parseFloat(document.getElementById("numero2").value);
+      console.log(num1 + num2);
+      document.getElementById("resultado").innerHTML = num1 - num2;
+    }
+
+    function multiplicar(){
+      var num1 = parseFloat(document.getElementById("numero1").value);
+      console.log(num1);
+      var num2 = parseFloat(document.getElementById("numero2").value);
+      console.log(num1 + num2);
+      document.getElementById("resultado").innerHTML = num1 * num2;
+    }
+
+    function dividir(){
+      var num1 = parseFloat(document.getElementById("numero1").value);
+      console.log(num1);
+      var num2 = parseFloat(document.getElementById("numero2").value);
+      console.log(num1 + num2);
+      document.getElementById("resultado").innerHTML = num1 / num2;
+    }
+  </script>
+
+</body>
+</html>
